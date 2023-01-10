@@ -85,17 +85,19 @@ class DOMManager {
     $("#app").empty();
     for (let appointment of appointments)
       $("#app").prepend(
-        ` <form class="form-control">
-        <div class="card" id="${appointments.id}>
-        <div class="card-header">
+        ` 
+        
+        <div class="card bg-" id="${appointments.id}>
+        <div id="name" class="card-header">
         <h2>${appointment.Name}</h2>
-        <div class="card">${appointment.DateOfAppointment}</div>
-        <div class="card">${appointment.TimeOfAppointment}</div>
-        <div class="card">${appointment.ServicesCompleated}</div>
+        <div id="date" class="card bg-info">${appointment.DateOfAppointment}</div>
+        <div id="time" class="card bg-info">${appointment.TimeOfAppointment}</div>
+        <div id="service" class="card bg-info">${appointment.ServicesCompleated}</div>
         
         <button class="btn btn-danger" onclick="DOMManager.deleteAppointment(${appointment.id})">Delete</button>
         </div>
         </div>
+
 `
       );
 console.log(appointments);
