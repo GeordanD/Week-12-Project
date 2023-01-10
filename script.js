@@ -67,8 +67,8 @@ class DOMManager {
             return AppointmentService.getAllAppointments();
             
         })
+            
             .then((appointments) => this.render(appointments));
-        console.log(Name)
     }
 
     static deleteAppointment(id) {
@@ -110,6 +110,7 @@ $("#create-new-appointment").click(() => {
     $("#Name, #DateOfAppointment, #TimeOfAppointment, #ServicesCompleated").val();{
         DOMManager.loadAllAppointments();
     }
+
     
 });
 
