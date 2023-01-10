@@ -110,7 +110,7 @@ $("#create-new-appointment").click(() => {
     $("#Name, #DateOfAppointment, #TimeOfAppointment, #ServicesCompleated").val();{
         DOMManager.loadAllAppointments();
     }
-
+TODO// fix loading issue after button is pressed to make appointment..
     
 });
 
