@@ -46,14 +46,19 @@ class DOMManager {
     static deleteAppointment(id) {
         console.log(AppointmentService.deleteAppointment);
         AppointmentService.deleteAppointment(id)
+            .done(() => {
+                return AppointmentService.loadAllAppointments();
+            })
+            .then((appointments) => this.render(appointments));
     }
 
-  static render(appointments) {
-      this.appointments = appointments;
-      fetch("https://63bb0bcecf99234bfa50f42b.mockapi.io/users");
-    for (let appointment of appointments)
-      $("#app").prepend(
-        ` 
+    static render(appointments) {
+        this.appointments = appointments;
+        fetch("https://63bb0bcecf99234bfa50f42b.mockapi.io/users");
+        $("#app").empty();
+        for (let appointment of appointments) {
+            $("#app").prepend(
+                ` 
         
         <div class="card  bg-dark text-danger" id="${appointments.id}>
         <div id="name" class="card-header">
@@ -66,7 +71,8 @@ class DOMManager {
         </div>
         </div>
 `);
-console.log(appointments);
+            console.log(appointment);
+        }
     }
   }
 function refreshPage() {
@@ -75,9 +81,7 @@ function refreshPage() {
 
 $("#create-new-appointment").click(() => {
   AppointmentService.createAppointment($("#Name, #DateOfAppointment, #TimeOfAppointment, #ServicesCompleated"));
-    $("#Name, #DateOfAppointment, #TimeOfAppointment, #ServicesCompleated").val();{
-        DOMManager.loadAllAppointments();
-    };
+    $("#Name, #DateOfAppointment, #TimeOfAppointment, #ServicesCompleated").val("");
 });
 
 
