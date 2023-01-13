@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,37 +9,42 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
+
 <body class="container">
     <div id="new-appointment" class="">
-        <h1 class="bg-dark text-white">New Appointment Form &nbsp;&nbsp;&nbsp;&nbsp &nbsp;&nbsp;&nbsp;&nbsp &nbsp;&nbsp;&nbsp;&nbsp Herron Barber Co.</h1>
-        <form action="" id="appointmentForm">
-        <input class="form-control bg-dark text-white" id="Name" name="Name" type="text" placeholder="Name">
-<input class="form-control bg-dark text-white"id="DateOfAppointment" name="DateOfAppointment" type="date" placeholder="Date">
-<input class="form-control bg-dark text-white"id="TimeOfAppointment" name="TimeOfAppointment" type="time" placeholder="time">
-<input class="form-control bg-dark text-white"id="ServicesCompleated" name="ServicesCompleated" type="text-area" placeholder="Service">
-  <button id="create-new-appointment" type="submit" class="btn btn-warning form-control btn-submit">Create Appointment</button>
-</form> <br>
-      
+        <h1 class="bg-dark text-white">New Appointment Form &nbsp;&nbsp;&nbsp;&nbsp &nbsp;&nbsp;&nbsp;&nbsp
+            &nbsp;&nbsp;&nbsp;&nbsp Herron Barber Co.</h1>
 
+        <form action="" id="appointmentForm">
+            <div class="row">
+                <div class="col">
+                    <input class="form-control bg-dark text-white" id="Name" name="Name" type="text" placeholder="Name">
+                </div>
+                <div class="col">
+                    <input class="form-control bg-dark text-white" id="DateOfAppointment" name="DateOfAppointment"
+                        type="date" placeholder="Date">
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <input class="form-control bg-dark text-white" id="TimeOfAppointment" name="TimeOfAppointment"
+                            type="time" placeholder="time">
+                    </div>
+                    <div class="col">
+                        <input class="form-control bg-dark text-white" id="ServicesCompleated" name="ServicesCompleated"
+                            type="text" placeholder="Services">
+                    </div>
+                </div>
+                <button id="create-new-appointment" type="submit"
+                    class="btn btn-warning form-control btn-submit"><b>Submit Appointment</b></button>
+        </form> <br>
+    </div>
     </div>
     <h1 class="bg-dark text-white text-center">Appointment List</h1>
-
     <div id="app" class="scrollbox">
-
     </div>
-
-
-
-
-
-
-
-
-
-
-    
     <script src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script src="script.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
+
 </html>
